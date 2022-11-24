@@ -1,5 +1,6 @@
-package com.mhksoft.smilinno.utils
+package com.mhksoft.smilinno.data.repository
 
+import com.mhksoft.smilinno.data.model.Resource
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.catch

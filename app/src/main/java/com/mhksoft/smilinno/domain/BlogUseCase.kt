@@ -14,19 +14,20 @@
  * limitations under the License.
  */
 
-package com.mhksoft.smilinno.data.repository
+package com.mhksoft.smilinno.domain
 
-import com.mhksoft.smilinno.data.remote.BlogService
+import com.mhksoft.smilinno.common.Formatters
+import com.mhksoft.smilinno.data.repository.BlogRepository
+import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
-class BlogRepository @Inject constructor(
-    private val api: BlogService
-) : BaseRepository() {
-     suspend fun getBlogs(sortType: BlogSortType) = getResult { api.getBlogs(sortType) }
-
-    suspend fun getBlogById(id: Long) = getResult { api.getBlogById(id) }
-}
-
-enum class BlogSortType {
-    Latest, Popular
+class BlogUseCase @Inject constructor(
+    private val blogRepository: BlogRepository
+) {
+    suspend fun getBlogDetail(id: Long) = blogRepository.getBlogById(id).onEach { response ->
+        Formatters.formatDate(response.data?.date)
+        response.data?.comments?.onEach { comment ->
+            Formatters.formatDate(comment?.createdOn)
+        }
+    }
 }

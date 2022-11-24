@@ -17,7 +17,6 @@
 package com.mhksoft.smilinno.data.repository
 
 import com.mhksoft.smilinno.data.remote.SliderService
-import com.mhksoft.smilinno.utils.BaseRepository
 import javax.inject.Inject
 
 class SliderRepository @Inject constructor(

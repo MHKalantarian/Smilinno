@@ -1,4 +1,4 @@
-package com.mhksoft.smilinno.utils
+package com.mhksoft.smilinno.data.model
 
 import androidx.annotation.Keep
 import retrofit2.HttpException
