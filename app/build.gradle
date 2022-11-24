@@ -6,11 +6,11 @@ plugins {
 }
 
 android {
-    namespace 'com.mhksoft.smilino'
+    namespace 'com.mhksoft.smilinno'
     compileSdk 33
 
     defaultConfig {
-        applicationId "com.mhksoft.smilino"
+        applicationId "com.mhksoft.smilinno"
         minSdk 21
         targetSdk 33
         versionCode 1

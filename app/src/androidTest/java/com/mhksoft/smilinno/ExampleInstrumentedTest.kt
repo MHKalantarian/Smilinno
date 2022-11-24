@@ -1,4 +1,4 @@
-package com.mhksoft.smilino
+package com.mhksoft.smilinno
 
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
@@ -17,6 +17,6 @@ class ExampleInstrumentedTest {
     fun useAppContext() {
         // Context of the app under test.
         val appContext = InstrumentationRegistry.getInstrumentation().targetContext
-        assertEquals("com.mhksoft.smilino", appContext.packageName)
+        assertEquals("com.mhksoft.smilinno", appContext.packageName)
     }
 }

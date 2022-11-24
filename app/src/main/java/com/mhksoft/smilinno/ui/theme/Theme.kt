@@ -1,4 +1,4 @@
-package com.mhksoft.smilino.ui.theme
+package com.mhksoft.smilinno.ui.theme
 
 import android.app.Activity
 import android.os.Build
@@ -24,7 +24,7 @@ private val LightColorScheme = lightColorScheme(
 )
 
 @Composable
-fun SmilinoTheme(
+fun smilinnoTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
     // Dynamic color is available on Android 12+
     dynamicColor: Boolean = true,

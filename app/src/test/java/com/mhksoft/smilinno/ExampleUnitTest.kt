@@ -1,4 +1,4 @@
-package com.mhksoft.smilino
+package com.mhksoft.smilinno
 
 import org.junit.Assert.assertEquals
 import org.junit.Test

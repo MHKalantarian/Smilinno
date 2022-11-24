@@ -1,4 +1,4 @@
-package com.mhksoft.smilino.ui.theme
+package com.mhksoft.smilinno.ui.theme
 
 import androidx.compose.ui.graphics.Color
 
