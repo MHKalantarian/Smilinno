@@ -1,4 +1,4 @@
-package com.mhksoft.smilinno.data
+package com.mhksoft.smilinno.data.model
 
 
 import androidx.annotation.Keep
