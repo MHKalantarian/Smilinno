@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">smilinno</string>
+    <!-- General -->
+    <string name="app_name">Smilinno</string>
+
+    <!-- Home Screen -->
+    <string name="home_screen_latest_blogs_title">Latest Blogs</string>
+    <string name="home_screen_popular_blogs_title">Popular Blogs</string>
+
+    <!-- Blog Screen -->
+    <string name="blog_screen_comments_title">Comments</string>
 </resources>
