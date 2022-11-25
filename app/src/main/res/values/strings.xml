@@ -1,6 +1,10 @@
 <resources>
     <!-- General -->
     <string name="app_name">Smilinno</string>
+    <string name="error">Error!</string>
+    <string name="no_data">No data found!</string>
+    <string name="blog_no_title_error">No Title</string>
+    <string name="blog_no_date_error">No Date</string>
 
     <!-- Home Screen -->
     <string name="home_screen_latest_blogs_title">Latest Blogs</string>

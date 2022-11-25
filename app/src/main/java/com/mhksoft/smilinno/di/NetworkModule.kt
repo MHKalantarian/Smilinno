@@ -43,7 +43,7 @@ object NetworkModule {
     ): Retrofit {
         return Retrofit.Builder()
             .client(okHttpClient)
-            .baseUrl("http://94.101.179.76:4005/api/v1")
+            .baseUrl("http://94.101.179.76:4005/api/v1/")
             .addConverterFactory(JacksonConverterFactory.create(objectMapper))
             .build()
     }

@@ -16,11 +16,9 @@
 
 package com.mhksoft.smilinno.domain
 
-import com.mhksoft.smilinno.common.Formatters
 import com.mhksoft.smilinno.data.repository.BlogRepository
 import com.mhksoft.smilinno.data.repository.BlogSortType
 import com.mhksoft.smilinno.data.repository.SliderRepository
-import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
 class HomeUseCase @Inject constructor(
@@ -28,17 +26,7 @@ class HomeUseCase @Inject constructor(
 ) {
     suspend fun getSliders() = sliderRepository.getSliders()
 
-    suspend fun getLatestBlogs() =
-        blogRepository.getBlogs(BlogSortType.Latest).onEach { response ->
-            response.data?.onEach { blog ->
-                Formatters.formatDate(blog.date)
-            }
-        }
+    suspend fun getLatestBlogs() = blogRepository.getBlogs(BlogSortType.Latest)
 
-    suspend fun getPopularBlogs() =
-        blogRepository.getBlogs(BlogSortType.Popular).onEach { response ->
-            response.data?.onEach { blog ->
-                Formatters.formatDate(blog.date)
-            }
-        }
+    suspend fun getPopularBlogs() = blogRepository.getBlogs(BlogSortType.Popular)
 }

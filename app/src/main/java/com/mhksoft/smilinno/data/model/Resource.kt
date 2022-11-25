@@ -24,7 +24,7 @@ data class Resource<T>
          */
         fun <T> error(httpCode: Int): Resource<T?> {
             return when (httpCode) {
-                else -> error("خطا در شبکه داخلی")
+                else -> error("Http error: $httpCode")
             }
         }
 
@@ -35,7 +35,7 @@ data class Resource<T>
             throwable.printStackTrace()
             return if (throwable is HttpException) {
                 error(throwable.code())
-            } else error("خطا در اتصال به شبکه، اگر از فیلتر شکن استفاده می کنید، آن را خاموش نمایید")
+            } else error("Connection error, please try again")
         }
 
         fun <T> loading(): Resource<T?> {

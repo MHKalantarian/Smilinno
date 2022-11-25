@@ -10,7 +10,7 @@ data class Blog(
     @JsonProperty("body") val body: String? = null,
     @JsonProperty("comments") val comments: List<Comment?>? = null,
     @JsonProperty("date") val date: String? = null,
-    @JsonProperty("id") val id: Int? = null,
+    @JsonProperty("id") val id: Long? = null,
     @JsonProperty("path") val path: String? = null,
     @JsonProperty("title") val title: String? = null
 ) {

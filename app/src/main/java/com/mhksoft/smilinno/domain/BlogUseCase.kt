@@ -16,18 +16,11 @@
 
 package com.mhksoft.smilinno.domain
 
-import com.mhksoft.smilinno.common.Formatters
 import com.mhksoft.smilinno.data.repository.BlogRepository
-import kotlinx.coroutines.flow.onEach
 import javax.inject.Inject
 
 class BlogUseCase @Inject constructor(
     private val blogRepository: BlogRepository
 ) {
-    suspend fun getBlogDetail(id: Long) = blogRepository.getBlogById(id).onEach { response ->
-        Formatters.formatDate(response.data?.date)
-        response.data?.comments?.onEach { comment ->
-            Formatters.formatDate(comment?.createdOn)
-        }
-    }
+    suspend fun getBlogDetail(id: Long) = blogRepository.getBlogById(id)
 }
