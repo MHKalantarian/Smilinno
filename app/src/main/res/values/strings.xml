@@ -2,9 +2,11 @@
     <!-- General -->
     <string name="app_name">Smilinno</string>
     <string name="error">Error!</string>
-    <string name="no_data">No data found!</string>
-    <string name="blog_no_title_error">No Title</string>
-    <string name="blog_no_date_error">No Date</string>
+    <string name="no_data_error">No data found!</string>
+    <string name="no_date_error">No date</string>
+    <string name="user_no_name_error">Anonymous</string>
+    <string name="blog_no_title_error">No title</string>
+    <string name="blog_no_author_error">Anonymous author</string>
 
     <!-- Home Screen -->
     <string name="home_screen_latest_blogs_title">Latest Blogs</string>

@@ -162,7 +162,7 @@ fun SliderView(
                 )
                 Text(
                     text = sliders[page].title ?: stringResource(id = R.string.blog_no_title_error),
-                    maxLines = 1,
+                    maxLines = 2,
                     overflow = TextOverflow.Ellipsis,
                     style = MaterialTheme.typography.titleSmall,
                     modifier = Modifier
@@ -231,7 +231,7 @@ fun BlogItem(
             Text(
                 text = item.title ?: stringResource(id = R.string.blog_no_title_error),
                 style = MaterialTheme.typography.titleSmall,
-                maxLines = 1,
+                maxLines = 2,
                 overflow = TextOverflow.Ellipsis,
                 modifier = Modifier.constrainAs(title) {
                     top.linkTo(image.bottom, margin = 8.dp)
@@ -240,7 +240,7 @@ fun BlogItem(
                     width = Dimension.fillToConstraints
                 })
             Text(
-                text = item.date?.formatDate() ?: stringResource(id = R.string.blog_no_date_error),
+                text = item.date?.formatDate() ?: stringResource(id = R.string.no_date_error),
                 style = MaterialTheme.typography.labelSmall,
                 modifier = Modifier.constrainAs(date) {
                     top.linkTo(title.bottom, margin = 8.dp)

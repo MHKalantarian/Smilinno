@@ -25,13 +25,16 @@ inline fun <reified T> ResourceContainer(
             )
         }
         ResourceState.SUCCESS -> {
-            if ((resource.data as List<*>).isEmpty())
-                Text(
-                    text = resource.errorMessage ?: stringResource(id = R.string.no_data),
-                    color = Color.Yellow
-                )
+            if (resource.data is List<*>)
+                if (resource.data.isEmpty())
+                    Text(
+                        text = resource.errorMessage ?: stringResource(id = R.string.no_data_error),
+                        color = Color.Yellow
+                    )
+                else
+                    content(resource.data)
             else
-                content(resource.data)
+                resource.data?.let { content(it) }
         }
     }
 }

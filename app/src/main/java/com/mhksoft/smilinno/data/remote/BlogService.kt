@@ -20,12 +20,13 @@ import com.mhksoft.smilinno.data.model.Blog
 import com.mhksoft.smilinno.data.repository.BlogSortType
 import retrofit2.Response
 import retrofit2.http.GET
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface BlogService {
     @GET("blogs")
     suspend fun getBlogs(@Query("sortType") sortType: BlogSortType): Response<List<Blog>>
 
-    @GET("blogs")
-    suspend fun getBlogById(@Query("id") idn: Long): Response<Blog>
+    @GET("blogs/{id}")
+    suspend fun getBlogById(@Path("id") id: Long): Response<Blog>
 }

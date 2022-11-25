@@ -27,7 +27,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.mhksoft.smilinno.ui.blog.BlogDetailScreen
+import com.mhksoft.smilinno.ui.blog.BlogDetailViewModel
 import com.mhksoft.smilinno.ui.home.HomeScreen
+import com.mhksoft.smilinno.ui.home.HomeViewModel
 import kotlinx.coroutines.CoroutineScope
 
 /**
@@ -58,7 +60,7 @@ fun SmilinnoNavGraph(
             Destinations.HOME_ROUTE,
         ) {
             HomeScreen(
-                viewModel = hiltViewModel(),
+                viewModel = hiltViewModel<HomeViewModel>(),
                 navigateToBlogDetail = actions.navigateToBlogDetail,
             )
         }
@@ -69,7 +71,8 @@ fun SmilinnoNavGraph(
             })
         ) {
             BlogDetailScreen(
-                viewModel = hiltViewModel(),
+                viewModel = hiltViewModel<BlogDetailViewModel>(),
+                navigateUp = actions.upPress,
                 blogId = it.arguments?.getLong("id"),
             )
         }
