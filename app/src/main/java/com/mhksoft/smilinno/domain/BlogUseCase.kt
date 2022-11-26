@@ -17,12 +17,11 @@
 package com.mhksoft.smilinno.domain
 
 import com.mhksoft.smilinno.data.repository.BlogRepository
-import kotlinx.coroutines.flow.filter
 import javax.inject.Inject
 
 class BlogUseCase @Inject constructor(
     private val blogRepository: BlogRepository
 ) {
     suspend fun getBlogDetail(id: Long) =
-        blogRepository.getBlogById(id).filter { it.data?.comments != null }
+        blogRepository.getBlogById(id)
 }

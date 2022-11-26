@@ -1,5 +1,6 @@
 package com.mhksoft.smilinno.ui.blog
 
+import android.util.Log
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -40,6 +41,7 @@ fun BlogDetailScreen(
             initialApiCalled = false
         }
     }
+    Log.e("State", uiState.blogDetail.state.toString())
 
     LazyColumn(
         horizontalAlignment = Alignment.CenterHorizontally,
